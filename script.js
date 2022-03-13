@@ -12,8 +12,11 @@ const button = document.querySelector('button');
 const input = document.querySelector('input');
 
 input.addEventListener('input', () => {
-	if (input.value >= 1) { button.classList.remove('hold') }
-	else button.classList.add('hold');
+	if (input.value.length >= 1) {
+		button.classList.remove('hold');
+	} else {
+		button.classList.add('hold');
+	}
 })
 
 button.addEventListener('click', () => {
