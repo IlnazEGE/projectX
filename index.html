@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<form action="#">
+		<input placeholder="Введите город" type="text">
+		<button class="hold">показать погоду</button>
+	</form>
+	<!-- <button class="btn">Клик</button> -->
+	<div class="city">Город: <span></span></div>
+	<div class="temp">Температура: <span></span>&#8451;</div>
+	<div class="temp-feels">Ощущается как: <span></span>&#8451;</div>
+	<div class="speed">Скорость ветра: <span></span> м/с</div>
+	<div class="speed">Порывы ветра до: <span class="gust"></span> м/с</div>
+	<div class="humidity">Влажность: <span></span>%</div>
+	<div class="pressure">Давление: <span></span> мм рт.ст.</div>
+	<div class="descr"><span></span></div>
+	<script src="script.js"></script>
+	<style>
+		body {
+			font-size: 50px;
+		}
+
+		button.hold {
+			opacity: 0.5;
+			pointer-events: none;
+		}
+	</style>
+</body>
+
+</html>
