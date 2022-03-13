@@ -8,24 +8,24 @@
 // }
 // https://api.openweathermap.org/data/2.5/weather?q=London&appid=94390dfce9b22714cfffb1f769325bc6
 
-const button = document.querySelector('button');
-const input = document.querySelector('input');
+const weatherButton = document.querySelector('.weather button');
+const weatherInput = document.querySelector('.weather input');
 
-input.addEventListener('input', () => {
-	if (input.value.length >= 1) {
-		button.classList.remove('hold');
+weatherInput.addEventListener('input', () => {
+	if (weatherInput.value.length >= 1) {
+		weatherButton.classList.remove('hold');
 	} else {
-		button.classList.add('hold');
+		weatherButton.classList.add('hold');
 	}
 })
 
-button.addEventListener('click', () => {
-	let city = input.value;
-	button.classList.add('hold');
-	input.value = "";
+weatherButton.addEventListener('click', e => {
+	e.preventDefault();
+	let city = weatherInput.value;
+	weatherButton.classList.add('hold');
+	weatherInput.value = "";
 	goWeather(city);
 })
-
 function goWeather(data = "Urussu") {
 	let city = data;
 	let appid = '94390dfce9b22714cfffb1f769325bc6'
@@ -49,3 +49,49 @@ function goWeather(data = "Urussu") {
 	// if (data != "Urussu") button.classList.remove('hold');
 }
 goWeather();
+
+//////////////////////////////////////////////////////////
+
+
+const cryptoButton = document.querySelector('.crypto button');
+const cryptoInput = document.querySelector('.crypto input');
+
+cryptoInput.addEventListener('input', () => {
+	if (cryptoInput.value.length >= 1) {
+		cryptoButton.classList.remove('hold');
+	} else {
+		cryptoButton.classList.add('hold');
+	}
+})
+
+
+cryptoButton.addEventListener('click', e => {
+	e.preventDefault();
+	let coin = cryptoInput.value;
+	cryptoButton.classList.add('hold');
+	cryptoInput.value = "";
+	goСrypto(coin);
+})
+
+
+function goСrypto(data = "bitcoin") {
+	const cryptoName = data;
+	const cryptoAPI = `https://api.coingecko.com/api/v3/coins/${cryptoName}`;
+
+	fetch(cryptoAPI)
+		.then(function (resp) {
+			return resp.json()
+		})
+		.then(function (data) {
+			console.log(data);
+			document.querySelector('.crypto-name .crypto-name-full').innerHTML = data.name;
+			document.querySelector('.crypto-name .crypto-name-ticker').innerHTML = data.tickers[0].base;
+			document.querySelector('.crypto-price-current span').innerHTML = data.tickers[0].last;
+		})
+		.catch(function () {
+		});
+}
+
+goСrypto();
+
+

@@ -5,11 +5,14 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Погода</title>
+	<title>Погода/Крипта</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 
 <body>
-	<form action="#">
+	<form class="weather" action="#">
 		<input placeholder="Введите город" type="text">
 		<button class="hold">показать погоду</button>
 	</form>
@@ -22,9 +25,17 @@
 	<div class="humidity">Влажность: <span></span>%</div>
 	<div class="pressure">Давление: <span></span> мм рт.ст.</div>
 	<div class="descr"><span></span></div>
+	<!--  -->
+	<form class="crypto" action="#">
+		<input placeholder="Введите тикер" type="text">
+		<button class="hold">показать курс</button>
+	</form>
+	<div class="crypto-name"><span class="crypto-name-full"></span> - <span class="crypto-name-ticker"></span></div>
+	<div class="crypto-price-current"><span class="coin"></span> usd "Binance"</div>
 	<script src="script.js"></script>
 	<style>
 		body {
+			font-family: Montserrat;
 			font-size: 35px;
 		}
 
