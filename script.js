@@ -46,6 +46,6 @@ function goWeather(data = "Urussu") {
 		})
 		.catch(function () {
 		});
-	if (data != "Urussu") button.classList.remove('hold');
+	// if (data != "Urussu") button.classList.remove('hold');
 }
 goWeather();
