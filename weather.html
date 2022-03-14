@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Погода</title>
+  <meta charset="UTF-8">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="css/style.min.css?_v=20220314152305">
+  <!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <div class="header__menu menu">
+          <nav class="menu__body">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="/weather.html" class="menu__link">Погода</a>
+              </li>
+              <li class="menu__item">
+                <a href="/crypto.html" class="menu__link">Криптовалюта</a>
+              </li>
+              <li class="menu__item">
+                <a href="/know.html" class="menu__link">Знаю</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="page">
+
+      <section class="weather">
+        <div class="weather__container">
+          <h1 class="weather__title">Погода</h1>
+          <form action="#" class="weather__form">
+            <div class="weather__row">
+              <input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Введите название города" class="weather__input input">
+              <button class="weather__button btn hold">Показать</button>
+              <span class="weather__error"></span>
+            </div>
+          </form>
+          <div class="weather__label"></div>
+          <ul class="weather__list">
+            <li class="weather__item item-weather item-weather_city">
+              <h2 class="item-weather__subtitle">Город:</h2>
+              <p class="item-weather__descr"></p>
+            </li>
+            <li class="weather__item item-weather item-weather_temp">
+              <h2 class="item-weather__subtitle">Температура:</h2>
+              <p class="item-weather__descr"></p>
+            </li>
+            <li class="weather__item item-weather item-weather_feel">
+              <h2 class="item-weather__subtitle">Ощущается как:</h2>
+              <p class="item-weather__descr"></p>
+            </li>
+            <li class="weather__item item-weather item-weather_speed">
+              <h2 class="item-weather__subtitle">Скорость ветра:</h2>
+              <p class="item-weather__descr"></p>
+            </li>
+            <li class="weather__item item-weather item-weather_max-speed">
+              <h2 class="item-weather__subtitle">Порывы ветра до:</h2>
+              <p class="item-weather__descr"></p>
+            </li>
+            <li class="weather__item item-weather item-weather_humidity">
+              <h2 class="item-weather__subtitle">Влажность:</h2>
+              <p class="item-weather__descr"></p>
+            </li>
+            <li class="weather__item item-weather item-weather_pressure">
+              <h2 class="item-weather__subtitle">Давление:</h2>
+              <p class="item-weather__descr"></p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <p class="footer__year">2022</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=51092280-e018-4241-bc97-180570de25d4&lang=ru_RU&_v=20220314152305"></script> -->
+  <script src="js/app.min.js?_v=20220314152305"></script>
+
+</body>
+
+</html>

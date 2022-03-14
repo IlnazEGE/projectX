@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Криптовалюта</title>
+  <meta charset="UTF-8">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="css/style.min.css?_v=20220314152305">
+  <!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <div class="header__menu menu">
+          <nav class="menu__body">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="/weather.html" class="menu__link">Погода</a>
+              </li>
+              <li class="menu__item">
+                <a href="/crypto.html" class="menu__link">Криптовалюта</a>
+              </li>
+              <li class="menu__item">
+                <a href="/know.html" class="menu__link">Знаю</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="page">
+      <section class="crypto">
+        <div class="crypto__container">
+          <h1 class="crypto__title">Криптовалюта</h1>
+          <form action="#" class="crypto__form">
+            <div class="crypto__row">
+              <input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder='Введите название криптовалюты' class="crypto__input input">
+              <button class="crypto__button btn hold">Показать</button>
+              <span class="crypto__error"></span>
+            </div>
+          </form>
+          <div class="crypto__label"></div>
+          <ul class="crypto__list">
+            <li class="crypto__item item-crypto item-crypto_name">
+              <h2 class="item-crypto__subtitle">Название:</h2>
+              <p class="item-crypto__descr"></p>
+            </li>
+            <li class="crypto__item item-crypto item-crypto_ticker">
+              <h2 class="item-crypto__subtitle">Тикер:</h2>
+              <p class="item-crypto__descr"></p>
+            </li>
+            <li class="crypto__item item-crypto item-crypto_price">
+              <h2 class="item-crypto__subtitle">Актуальный курс:</h2>
+              <p class="item-crypto__descr"></p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <p class="footer__year">2022</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=51092280-e018-4241-bc97-180570de25d4&lang=ru_RU&_v=20220314152305"></script> -->
+  <script src="js/app.min.js?_v=20220314152305"></script>
+
+</body>
+
+</html>
